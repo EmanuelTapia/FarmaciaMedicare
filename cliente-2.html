@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Inicio | Farmacia Medicare</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="icon"  href="../static/img/logo.png">
+	</head>
+	<body class="flex h-dvh w-dvh flex-col">
+		
+        <header class="flex justify-center items-center bg-[#CB4335] w-full h-14">
+            <nav class="flex w-screen h-8 mx-4">
+                
+                <div class="flex items-center w-5/6">
+                    <button id="bar" onclick="mostrar()">
+                        <i  class="fa-solid fa-bars fa-lg text-slate-50 transition hover:scale-125"></i>
+                    </button>
+                </div> 
+
+                <div class="flex w-1/6 justify-end">
+                    <div class="flex items-center mx-10 space-x-2">
+                        <img src="../static/ico/btn-perfil.svg" alt="btn-perfil" width="30em">
+                        <label class="text-slate-50 font-serif text-xl mt-1" for="">Usuario</label>
+                    </div>
+                    <div class="flex items-center">
+                        <a href="./login.html"><img src="../static/ico/btn-salir.svg" alt="btn-salir" width="35px" class="transition hover:scale-125"></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="flex h-full w-full">
+            <div id="sidebar" class="flex flex-col bg-[#990000] ">
+                <div class="flex justify-center items-center h-[25em] text-slate-50">
+                    <a href="./index.html"><img src="../static/img/logo-blanco.png" alt="img-logo" class="size-[12em]"></a>
+                </div>
+
+                <div class="text-slate-50 font-mono text-xl mt-5 h-full">
+                    <ul class="flex flex-col list-none">
+                        <a href="./menu.html" class="flex p-3 hover:bg-[#CB4335]"><il class="flex"><i class="fa-solid fa-house pr-2"></i>Menú</il></a>
+                        <a href="./ventas.html" class="flex p-3 hover:bg-[#CB4335]"><il class="flex"><i class="fa-solid fa-cart-shopping pr-2"></i>Ventas</il></a>
+                        <a href="./mantenimiento.html" class="flex p-3 hover:bg-[#CB4335]"><il class="flex"><i class="fa-solid fa-screwdriver-wrench pr-2"></i>Mantenimiento</il></a>
+                        <a href="./reporte.html" class="flex p-3 hover:bg-[#CB4335]"><il class="flex"><i class="fa-solid fa-file pr-2"></i>Reportes</il></a>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div class= "flex flex-col h-full w-full">
+                <div class="flex items-center basis-2/12 space-x-[3vh] pl-7">
+                    <img src="../static/img/atencion-al-cliente.png" alt="imagen-ventas" class="size-[9vh]">
+                    <h1 class="font-bold text-[#CF2A27] text-[5vh]">Cliente</h1>
+                </div>
+                <form action="" class="flex flex-col basis-10/12">
+                    <div class="grid grid-cols-2 gap-x-[8vh] gap-y-[4vh] place-content-center basis-9/12">
+                        <div class="w-9/12 place-self-end">
+                            <label for="ident" class="font-medium block text-[2.3vh] text-[#CF2A27]">Nombre:</label>
+                            <input type="text" id="name" placeholder="Ingrese Nombre" class="w-full border-[0.4vh]  border-[#CF2A27]  rounded-lg px-2 text-[2.3vh] text-gray-500 outline-none h-[6vh] ">
+                        </div>
+                        <div class="w-9/12">
+                            <label for="ident" class="font-medium block text-[2.3vh] text-[#CF2A27]">Tipo de Cliente:</label>
+                            <select name="" id="Producto" class="w-full border-[0.4vh]  border-[#CF2A27]  rounded-lg px-2 text-[2.3vh] text-gray-500 outline-none h-[6vh]" >
+                                <option value="" class="">Seleciona una opción</option>
+                                <option value="">Natural</option>
+                                <option value="">Jurídico</option>
+                            </select>
+                        </div>
+                        <div class="w-9/12 place-self-end">
+                            <label for="ident" class="font-medium block text-[2.3vh] text-[#CF2A27]">Apellido:</label>
+                            <input type="text" id="last_name" placeholder="Ingrese Apellido" class="w-full border-[0.4vh]  border-[#CF2A27]  rounded-lg px-2 text-[2.3vh] text-gray-500 outline-none h-[6vh] ">
+                        </div>
+                        <div class="w-9/12">
+                            <label for="ident" class="font-medium block text-[2.3vh] text-[#CF2A27]">Número de Teléfono:</label>
+                            <input type="text" id="phone_number" placeholder="Ingrese el Número de Teléfono" class="w-full  border-[0.4vh] border-[#CF2A27]   rounded-lg px-2 text-[2.3vh] text-gray-500 outline-none h-[6vh] ">
+                        </div>
+                        <div class="w-9/12 place-self-end">
+                            <label for="ident" class="font-medium block text-[2.3vh] text-[#CF2A27]">DNI:</label>
+                            <input type="text" id="dni" placeholder="Ingrese el DNI" class="w-full border-[0.4vh]  border-[#CF2A27]  rounded-lg px-2 text-[2.3vh] text-gray-500 outline-none h-[6vh] ">
+                        </div>
+                        <div class="w-9/12">
+                            <label for="ident" class="font-medium block text-[2.3vh] text-[#CF2A27]">RUC:</label>
+                            <input type="text" id="ruc" placeholder="Ingrese el RUC" class="w-full  border-[0.4vh] border-[#CF2A27]   rounded-lg px-2 text-[2.3vh] text-gray-500 outline-none h-[6vh] ">
+                        </div>
+                        <div class="w-9/12 place-self-end">
+                            <label for="ident" class="font-medium block text-[2.3vh] text-[#CF2A27]">Fecha de Nacimiento:</label>
+                            <input type="text" id="birthdate" placeholder="Ingrese la Fecha de Nacimiento" class="w-full border-[0.4vh]  border-[#CF2A27]  rounded-lg px-2 text-[2.3vh] text-gray-500 outline-none h-[6vh] ">
+                        </div>
+                        <div class="w-9/12">
+                            <label for="ident" class=" block font-medium text-[2.3vh] text-[#CF2A27]">Dirección:</label>
+                            <input type="text" id="address" placeholder="Ingrese la Dirección" class="w-full  border-[0.4vh] border-[#CF2A27]   rounded-lg px-2 text-[2.3vh] text-gray-500 outline-none h-[6vh] ">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-5 gap-1 place-items-center basis-3/12">
+                        
+                        <a href="./cliente.html" class=" transition hover:scale-125 flex justify-center">
+                            <p class="flex items-center text-slate-50 text-[2.5vh] font-medium px-[3vh] py-2 bg-gray-400 rounded-xl " ><img src="../static/ico/btn-regresar.svg" alt="img-reporte" class="size-[2.5vh] mr-3">Regresar</p>
+                        </a>
+                        <button id="btnRegistrar">Registrar</button>
+                        <a id=""  href="./cliente.html" class=" transition hover:scale-125 flex justify-center">
+                            <p class="flex items-center text-slate-50 text-[2.5vh] font-medium px-[3vh] py-2 bg-green-600 rounded-xl " ><img src="../static/ico/btn-guardar.svg" alt="btn-guardar" class="size-[2.5vh] mr-3">Guardar</p>
+                        </a>
+                        <a href="" class=" transition hover:scale-125 flex justify-center ">
+                            <p class="flex items-center text-slate-50 text-[2.5vh] font-medium px-[3vh] py-2 bg-amber-500 rounded-xl " ><img src="../static/ico/btn-actualizar.svg" alt="btn-actualizar" class="size-[2.5vh] mr-3">Actualizar</p>
+                        </a>
+                        <a href=""></a>
+                    </div>
+                </form>
+
+            </div>
+
+            
+            
+        </main>
+        
+
+        <footer>
+
+        </footer>
+        <script src="../static/js/formularioCustomer.js"></script>
+        <script src="../static/js/funciones.js"></script>
+
+		
+	</body>
+</html>
